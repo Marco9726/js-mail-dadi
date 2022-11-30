@@ -1,7 +1,7 @@
 //1 - creare un array con una lista di email 
 const list = ['pippo@gmail.com', 'paperino@icloud.it', 'topolino@yahoo.it'];
 //2 - chiere all'utente di inserire una email vailda
-const user_email = prompt('Inresisci la tua email');
+const user_email = document.getElementById('email').value
 //3 - confrontare se la mail inserita fa parte della lista dell'array
 //3.1 - creare un cilo for di ricerca per la lista dell'array
 let found = false;
@@ -15,8 +15,10 @@ for ( i=0; i < list.length; i++){
 //3.2.1 - se le email corrispondono stampare "Puoi partecipare"
 if(found) {
     console.log('Puoi partecipare');
+    document.getElementById('success').innerHTML = 'Email esatta, accesso consentito'
 }
 //3.2.2 - se non corrispondono stampare "Non puoi partecipare"
 else {
     console.log('Non puoi partecipare');
+    document.getElementById('danger').innerHTML = 'Email errata, ATTENZIONE INFORMAZIONI A RISCHIO!'
 }
