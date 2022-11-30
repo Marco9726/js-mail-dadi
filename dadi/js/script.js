@@ -17,3 +17,5 @@ else {
     console.log('Hai vinto');
 }
 
+console.log(`il computer ha fatto: ${computerDice}, tu hai fatto ${yourDice}`);
+
